@@ -6,7 +6,7 @@
   >
   <v-container>
     <v-row justify="space-between">
-      <v-col cols="4">
+      <v-col cols="12" md="12" lg="4">
       <v-img
         height="750"
         :src="movie.large_cover_image"
@@ -25,7 +25,7 @@
       </template>
       </v-img>
     </v-col>
-    <v-col cols="8">
+    <v-col cols="12" md="12" lg="8">
       <v-card-title>{{movie.title}}</v-card-title>
         <v-card-text>
           <v-row
@@ -66,10 +66,11 @@
            <a :href="torrent.url">{{torrent.quality}}</a>
           </v-chip>
         </v-chip-group>
+        <youtube :video-id="movie.yt_trailer_code" player-width="100%"></youtube>
       </v-card-text>
 
       <v-card-actions>
-        <youtube :video-id="movie.yt_trailer_code"></youtube>
+        
       </v-card-actions>
     </v-col>
     </v-row>

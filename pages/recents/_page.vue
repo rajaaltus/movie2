@@ -1,10 +1,10 @@
 <template>
   <v-container>
     <v-row>
-      <v-col cols="12">
+      <v-col cols="12" >
         <Paginate :page="page" :length="movies.movie_count/12" />
         <v-row align="left" justify="space-between">
-          <v-col cols="3" v-for="(movie, i) in movies.movies" :key="i">
+          <v-col cols="12" lg="3" md="12" v-for="(movie, i) in movies.movies" :key="i">
             <v-card
               
               class="mx-auto ma-2"
