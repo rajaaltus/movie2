@@ -1,3 +1,12 @@
+@import 'bootstrap/scss/bootstrap.scss';
 a {
-  text-decoration: none;
+  text-decoration: none !important;
+}
+.pagination-lg .page-item:first-child .page-link, .page-item.disabled .page-link, .pagination-lg .page-link {
+  background-color: #141414;
+  color:whitesmoke;
+}
+.page-item.active .page-link {
+  background-color: #dc3545;
+  border-color: #dc3545 !important;
 }
