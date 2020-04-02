@@ -63,11 +63,12 @@
     </v-row>
   </v-container>
 </template>
+
 <script>
 import { mapState } from 'vuex'
 import Paginate from '@/components/Paginate'
 export default {
-  head() {
+   head() {
     return {
       title: "Movie Browser" 
     }
@@ -78,6 +79,7 @@ export default {
   data: () => ({
     show: false,
     hover: false,
+    page: 1
   }),
   computed: {
     ...mapState({
@@ -86,7 +88,7 @@ export default {
   },
   async fetch ({ store, params }) {
     let queryString = '';
-    queryString = `limit=12&page=${params.page}`;
+    queryString = `limit=12&genre=Thrillers&page=${params.page}`;
     await store.dispatch('setMovies', {qs: queryString})
   }
 }

@@ -8,7 +8,7 @@
             <v-card
               
               class="mx-auto ma-2"
-              max-width="350"
+              max-width="250"
               max-height="550"
             >
               <nuxt-link :to="`/movie/${movie.id}`">
@@ -20,7 +20,7 @@
               <v-img
                 :src="movie.medium_cover_image"
                 height="400"
-                width="350"
+                width="250"
                 cover
               >
               <v-fade-transition>
@@ -38,22 +38,22 @@
                  </template>
               </v-hover>
               </nuxt-link>
-              
-
-              <v-card-subtitle>
+              <v-row>
+              <v-card-subtitle class="mx-2">
                 {{movie.year}}
               </v-card-subtitle>
-
-              <v-card-actions>
-                <v-btn text>Share</v-btn>
-
-                <v-btn
-                  color="purple"
-                  text
+                <v-spacer></v-spacer>
+                <v-chip
+                  class="ma-3 mr-6"
+                  align="right"
+                  color="orange"
+                  text-color="white"
                 >
-                  Explore
-                </v-btn>
-              </v-card-actions>
+                  {{movie.rating}} / 10
+                  <v-icon right>mdi-star</v-icon>
+                </v-chip>
+             
+              </v-row>
             </v-card>
           </v-col>
         
@@ -68,6 +68,11 @@
 import { mapState } from 'vuex'
 import Paginate from '@/components/Paginate'
 export default {
+   head() {
+    return {
+      title: "Movie Browser"
+    }
+  },
   components: {
     Paginate
   },

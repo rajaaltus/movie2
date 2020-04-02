@@ -144,10 +144,12 @@
       drawer: false,
       items: [
         { icon: 'mdi-trending-up', text: 'Most Recent', to: '/recents' },
-        { icon: 'mdi-youtube-subscription', text: 'Thrillers' },
-        { icon: 'mdi-history', text: 'Comedy' },
-        { icon: 'mdi-playlist-play', text: 'Romantic' },
-        { icon: 'mdi-clock', text: '4k' },
+        { icon: 'mdi-alarm-light-outline', text: 'Crime', to: '/crime' },
+        { icon: 'mdi-alien-outline', text: 'Sci-Fi', to: '/sci-fi' },
+        { icon: 'mdi-movie-open', text: 'Drama', to: '/drama' },
+        { icon: 'mdi-face-recognition', text: 'Animation', to: '/animation' },
+        { icon: 'mdi-emoticon-devil', text: 'Thrillers', to: '/thrillers' },
+        { icon: 'mdi-heart-pulse', text: 'Romance', to: '/romance' },
       ],
       items2: [
         { picture: 28, text: 'Joseph' },

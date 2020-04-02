@@ -16,7 +16,7 @@
       >
       <template v-slot:placeholder>
         <v-row
-          class="fill-height ma-0"
+          class="fill-height"
           align="center"
           justify="center"
         >
@@ -81,6 +81,11 @@
 <script>
 import { mapState } from 'vuex'
 export default {
+  head() {
+    return {
+      title: "Movie Browser" 
+    }
+  },
   data: () => ({
     loading: false,
     selection: 1,

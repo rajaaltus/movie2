@@ -2,7 +2,7 @@
   <v-container>
     <v-row>
       <v-col cols="12">
-        <Paginate />
+         <Paginate :base-url="baseUrl" />
         <v-row align="left" justify="space-between">
           <v-col cols="12" lg="3" md="12" v-for="(movie, i) in movies.movies" :key="i">
             <v-card
@@ -58,11 +58,12 @@
           </v-col>
         
         </v-row>
-        <Paginate />
+        <Paginate :base-url="baseUrl" />
     </v-col>
     </v-row>
   </v-container>
 </template>
+
 <script>
 import { mapState } from 'vuex'
 import Paginate from '@/components/Paginate'
@@ -78,6 +79,8 @@ export default {
   data: () => ({
     show: false,
     hover: false,
+    page: 1,
+    baseUrl: '/drama/'
   }),
   computed: {
     ...mapState({
@@ -86,7 +89,7 @@ export default {
   },
   async fetch ({ store, params }) {
     let queryString = '';
-    queryString = `limit=12&page=${params.page}`;
+    queryString = `limit=12&genre=drama&page=${params.page}`;
     await store.dispatch('setMovies', {qs: queryString})
   }
 }

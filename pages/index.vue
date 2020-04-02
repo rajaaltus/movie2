@@ -13,11 +13,11 @@
       <v-slide-item
         v-for="(movie, i) in movies"
         :key="i"
-        class="ma-2"
+        class="mx-7"
       >
         <v-card
           height="400"
-          width="275"
+          width="250"
         >
           <v-row
             class="fill-height"
@@ -30,8 +30,8 @@
               lazy-src="/placeholder.png"
               class="white--text align-end mx-4 pa-2"
               gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
-              height="400"
-              width="275"
+              height="100%"
+              width="100%"
             >
             <template v-slot:placeholder>
               <v-row
@@ -82,7 +82,11 @@
 <script>
 import { mapState } from 'vuex'
 export default {
-
+  head() {
+    return {
+      title: "Movie Browser"
+    }
+  },
   data () {
     return {
       colors: [
