@@ -2,7 +2,7 @@
   <v-container>
     <v-row>
       <v-col cols="12">
-        <Paginate />
+        <Paginate :base-url="baseUrl" />
         <v-row align="left" justify="space-between">
           <v-col cols="12" lg="3" md="12" v-for="(movie, i) in movies.movies" :key="i">
             <v-card
@@ -58,7 +58,7 @@
           </v-col>
         
         </v-row>
-        <Paginate />
+        <Paginate :base-url="baseUrl" />
     </v-col>
     </v-row>
   </v-container>
@@ -78,6 +78,7 @@ export default {
   data: () => ({
     show: false,
     hover: false,
+    baseUrl: '/recents/'
   }),
   computed: {
     ...mapState({
