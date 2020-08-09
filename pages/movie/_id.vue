@@ -26,7 +26,17 @@
       </v-img>
     </v-col>
     <v-col cols="12" md="12" lg="8">
-      <v-card-title>{{movie.title}}</v-card-title>
+      <v-row>
+        <v-col cols="10" md="10" lg="10">
+          <v-card-title>{{movie.title}}</v-card-title>
+        </v-col>
+        <v-spacer></v-spacer>
+        <v-col cols="2" md="2" lg="2">
+          <v-btn class="success" @click="$router.go(-1)">Back</v-btn>
+        </v-col>
+        
+      </v-row>
+      
         <v-card-text>
           <v-row
             align="center"
