@@ -55,10 +55,10 @@ html, body {
     @apply mx-8 text-justify py-8 text-white;
   }
   &-movie-poster {
-    @apply w-1/3;
+    @apply w-full md:w-1/3;
   }
   &-movie-details {
-    @apply w-2/3;
+    @apply w-full md:w-2/3 pt-4 md:pt-0;
   }
   &-movie-header {
     @apply flex items-center justify-start space-x-4;

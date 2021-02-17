@@ -2,7 +2,7 @@
   <section class="bg-gray-800 w-full h-full min-h-screen">
     <div class="app-movie">
       <!-- <pre>{{ movie }}</pre> -->
-      <div class="app-flex-start space-x-4">
+      <div class="app-flex-start flex-col md:flex-row md:space-x-4">
         <div class="app-movie-poster">
           <img :src="movie.large_cover_image" :alt="movie.title" />
         </div>
