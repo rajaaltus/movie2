@@ -1,7 +1,8 @@
 <template>
-  <div class="bg-gray-800 text-white py-4 pb-4">
-    <section class="mx-auto max-w-7xl">
-      <h1 class="text-4xl font-semibold mx-auto py-4">Recents</h1>
+  <div class="max-w-7xl mx-auto text-white py-4 pb-4">
+    <section>
+      <PageTitle title="romance" />
+
       <div class="w-full grid grid-cols-5 gap-4">
         <MovieCard v-for="movie in movies" :key="movie.id" :movie_id="movie.id" :title="movie.title" :genres="movie.genres" :description="movie.summary" :image="movie.medium_cover_image" :rating="movie.rating" :downloads="movie.torrents" />
       </div>
@@ -17,16 +18,14 @@ export default {
       title: "Movie Browser",
     };
   },
-  data() {
-    return {};
-  },
+
   computed: {
     ...mapState({
       movies: (state) => state.movies.data.movies,
     }),
   },
-  async fetch({ store }) {
-    let queryString = "";
+  async asyncData({ store }) {
+    let queryString = "limit=10&genre=romance&page=1";
     await store.dispatch("setMovies", { qs: queryString });
   },
 };

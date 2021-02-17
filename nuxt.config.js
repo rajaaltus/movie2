@@ -1,72 +1,58 @@
-
 export default {
-  mode: 'spa',
   /*
-  ** Headers of the page
-  */
+   ** Headers of the page
+   */
+  target: "static",
   head: {
-    title: process.env.npm_package_name || '',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
-    ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    title: process.env.npm_package_name || "",
+    meta: [{ charset: "utf-8" }, { name: "viewport", content: "width=device-width, initial-scale=1" }, { hid: "description", name: "description", content: process.env.npm_package_description || "" }],
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
   /*
-  ** Customize the progress-bar color
-  */
-  loading: { color: '#fff' },
+   ** Customize the progress-bar color
+   */
+  loading: { color: "#fff" },
   /*
-  ** Global CSS
-  */
-  css: [
-    '@/assets/scss/style.scss'
-  ],
+   ** Global CSS
+   */
+  css: ["~/assets/scss/app.scss"],
+  build: {
+    extractCSS: true,
+    loaders: {
+      limit: 0,
+    },
+  },
   /*
-  ** Plugins to load before mounting the App
-  */
-  plugins: [
-    '@/plugins/youtube.js'
-  ],
+   ** Plugins to load before mounting the App
+   */
+  plugins: ["~/plugins/youtube.client.js"],
+  components: true,
   /*
-  ** Nuxt.js dev-modules
-  */
-  buildModules: [
-    '@nuxtjs/vuetify',
-  ],
+   ** Nuxt.js dev-modules
+   */
+  buildModules: ["@nuxtjs/tailwindcss"],
   /*
-  ** Nuxt.js modules
-  */
+   ** Nuxt.js modules
+   */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
-    'bootstrap-vue/nuxt'
+    "@nuxtjs/axios",
   ],
-  bootstrapVue: {
-    bootstrapCSS: false, // Or `css: false`
-    bootstrapVueCSS: false, // Or `bvCSS: false`,
-    componentPlugins: [
-      'PaginationNavPlugin'
-    ]
-  },
+
   /*
-  ** Axios module configuration
-  ** See https://axios.nuxtjs.org/options
-  */
+   ** Axios module configuration
+   ** See https://axios.nuxtjs.org/options
+   */
   axios: {
-    baseURL: 'https://yts.mx/api/v2'
+    baseURL: "https://yts.mx/api/v2",
   },
   /*
-  ** Build configuration
-  */
+   ** Build configuration
+   */
   build: {
     /*
-    ** You can extend webpack config here
-    */
-    extend (config, ctx) {
-    }
-  }
-}
+     ** You can extend webpack config here
+     */
+    extend(config, ctx) {},
+  },
+};

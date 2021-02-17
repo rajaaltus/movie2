@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+html, body {
+  @apply font-poppins;
+}
+
+.app {
+  &-flex {
+    @apply flex justify-between items-center;
+
+    &-start {
+      @apply flex items-start justify-start;
+    }
+  }
+  &-header {
+    @apply bg-gray-900 text-white w-full relative mx-auto px-8 h-20;
+  }
+  &-spacer {
+    @apply py-4 border-b border-gray-600;
+  }
+  &-header-nav {
+    li {
+      @apply px-4 text-sm tracking-wide font-semibold;
+    }
+    li:hover {
+      @apply text-gray-400 duration-300;
+    }
+  }
+  &-not-mobile {
+   @apply hidden md:block;
+  }
+  &-search-container {
+    @apply w-full;
+  }
+  &-search {
+    @apply relative w-96 border rounded-full px-2 py-1 mx-auto;
+  }
+  &-search-text {
+    @apply block flex-grow text-left px-4 flex-shrink overflow-hidden;
+  }
+  &-search-icon {
+    @apply flex items-center justify-center relative h-8 w-8 rounded-full;
+  }
+  &-download {
+    @apply py-2 px-4 text-xs bg-green-600 text-white rounded-md shadow-md mr-2;
+  }
+  &-rating {
+    @apply w-8 h-8 bg-indigo-800 font-semibold text-white text-sm antialiased rounded-full flex items-center justify-center absolute top-2 right-2 shadow-lg;
+  }
+  &-genres {
+    @apply flex items-center justify-start text-xs font-normal tracking-wide space-x-2 text-yellow-200;
+    
+  }
+  &-movie {
+    @apply mx-8 text-justify py-8 text-white;
+  }
+  &-movie-poster {
+    @apply w-1/3;
+  }
+  &-movie-details {
+    @apply w-2/3;
+  }
+  &-movie-header {
+    @apply flex items-center justify-start space-x-4;
+    span {
+      @apply bg-purple-800 text-white w-10 text-sm font-semibold antialiased h-10 rounded-full flex items-center justify-center font-mono;
+    }
+  }
+  &-movie-title {
+    @apply font-semibold text-2xl tracking-wide
+  }
+  &-movie-description {
+    @apply text-sm font-normal leading-6 py-4;
+  }
+  &-movie-genres {
+    @apply flex items-center justify-start space-x-2;
+    li {
+      @apply bg-green-600 text-white px-2 py-1 text-xs rounded-full shadow-md;
+    }
+  }
+  &-movie-downloads {
+    @apply flex items-center justify-start space-x-2 py-4;
+    a {
+      @apply bg-purple-700 text-white px-4 py-2 tracking-wide text-sm rounded-md shadow-md;
+    }
+  }
+  &-page-title {
+    @apply flex items-center justify-start space-x-2;
+  }
+}
