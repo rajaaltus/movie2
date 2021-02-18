@@ -4,7 +4,18 @@
       <PageTitle title="sci-fi" />
 
       <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
-        <MovieCard v-for="movie in movies" :key="movie.id" :movie_id="movie.id" :title="movie.title" :genres="movie.genres" :description="movie.summary" :image="movie.medium_cover_image" :rating="movie.rating" :downloads="movie.torrents" />
+        <MovieCard
+          v-for="movie in movies"
+          :key="movie.id"
+          :movie_id="movie.id"
+          :title="movie.title"
+          :year="movie.year"
+          :genres="movie.genres"
+          :description="movie.summary"
+          :image="movie.medium_cover_image"
+          :rating="movie.rating"
+          :downloads="movie.torrents"
+        />
       </div>
     </section>
   </div>

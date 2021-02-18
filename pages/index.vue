@@ -3,7 +3,18 @@
     <section class="mx-auto max-w-7xl px-4 md:px-0">
       <h1 class="text-4xl font-semibold mx-auto py-4">Recents</h1>
       <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
-        <MovieCard v-for="movie in movies" :key="movie.id" :movie_id="movie.id" :title="movie.title" :genres="movie.genres" :description="movie.summary" :image="movie.medium_cover_image" :rating="movie.rating" :downloads="movie.torrents" />
+        <MovieCard
+          v-for="movie in movies"
+          :key="movie.id"
+          :movie_id="movie.id"
+          :year="movie.year"
+          :title="movie.title"
+          :genres="movie.genres"
+          :description="movie.summary"
+          :image="movie.medium_cover_image"
+          :rating="movie.rating"
+          :downloads="movie.torrents"
+        />
       </div>
     </section>
   </div>
@@ -25,8 +36,8 @@ export default {
       movies: (state) => state.movies.data.movies,
     }),
   },
-  async fetch({ store }) {
-    let queryString = "";
+  async asyncData({ store }) {
+    let queryString = "limit=10&page=1";
     await store.dispatch("setMovies", { qs: queryString });
   },
 };

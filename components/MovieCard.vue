@@ -1,10 +1,11 @@
 <template>
   <div class="w-full rounded-lg overflow-hidden shadow-lg bg-gray-600 relative">
     <nuxt-link :to="`/movie/${movie_id}`">
-      <img class="w-full" :src="image" :alt="title" />
+      <nuxt-img fit="cover" class="w-full" :src="image" :alt="title" loading="lazy" />
     </nuxt-link>
     <div class="px-2 py-4">
       <div>
+        <span class="text-sm font-light tracking-wide">{{ year }}</span>
         <div class="font-bold text-lg mb-2 truncate">{{ title }}</div>
         <ul class="app-genres">
           <li v-for="(item, index) in genres" :key="index">{{ item }}</li>
@@ -21,6 +22,9 @@
 <script>
 export default {
   props: {
+    year: {
+      type: Number,
+    },
     movie_id: {
       type: Number,
       required: true,

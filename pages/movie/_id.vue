@@ -9,8 +9,9 @@
         <div class="app-movie-details">
           <div class="app-movie-header">
             <div class="app-movie-title">{{ movie.title }}</div>
-            <span>{{ movie.rating }}</span>
+            <span class="text-sm font-light">{{ movie.rating }}</span>
           </div>
+          <span>{{ movie.year }}</span>
           <p class="app-movie-description">{{ movie.description_full }}</p>
           <div>
             <ul class="app-movie-genres">

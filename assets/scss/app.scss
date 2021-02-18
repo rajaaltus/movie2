@@ -87,4 +87,9 @@ html, body {
   &-page-title {
     @apply flex items-center justify-start space-x-2;
   }
+ 
+}
+
+.isLoading {
+  @apply w-full bg-gray-400 flex items-center justify-center;
 }

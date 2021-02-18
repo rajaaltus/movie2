@@ -19,6 +19,7 @@
     "vue-youtube-embed": "^2.2.2"
   },
   "devDependencies": {
+    "@nuxt/image": "^0.4.1",
     "autoprefixer": "^9",
     "postcss": "^7",
     "sass": "^1.30.0",
