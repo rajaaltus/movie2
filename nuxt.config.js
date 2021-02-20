@@ -32,9 +32,7 @@ export default {
    ** Nuxt.js dev-modules
    */
   buildModules: ["@nuxtjs/tailwindcss", "@nuxt/image"],
-  image: {
-    domains: ["https://yts.mx", "https://img.yts.mx"],
-  },
+  image: {},
   /*
    ** Nuxt.js modules
    */
