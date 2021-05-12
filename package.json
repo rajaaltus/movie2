@@ -21,7 +21,7 @@
   "devDependencies": {
     "@nuxt/image": "^0.4.1",
     "autoprefixer": "^9",
-    "postcss": "^7",
+    "postcss": "^8",
     "sass": "^1.30.0",
     "sass-loader": "^10.1.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat"
